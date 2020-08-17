@@ -15,7 +15,12 @@ func PlayTutorial01() {
 	}
 
 	// Use `defer` to ensure the connection is always properly closed before exiting the main() function.
-	defer conn.Close()
+	defer func() {
+		err := conn.Close()
+		if err != nil {
+			log.Fatal(err)
+		}
+	}()
 
 	fmt.Println("Send 'PING' to Redis")
 	// Send a Redis command across the connection.

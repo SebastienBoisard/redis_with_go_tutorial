@@ -15,8 +15,12 @@ func PlayTutorial02() {
 	}
 
 	// Use `defer` to ensure the connection is always properly closed before exiting the main() function.
-	defer conn.Close()
-
+	defer func() {
+		err := conn.Close()
+		if err != nil {
+			log.Fatal(err)
+		}
+	}()
 
 	// Add a key to hold a string value (Cf. https://redis.io/commands/set)
 	fmt.Println(`Send 'SET my_first_key "my_first_value"' to Redis`)
