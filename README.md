@@ -9,7 +9,7 @@ A simple Redis tutorial with Go
 For this tutorial, we'll use Redis from a Docker image.
 
 
-Pull the latest redis image from the docker hub repository (Cf. https://hub.docker.com/_/redis)
+Pull the latest Redis image from the Docker Hub repository (Cf. https://hub.docker.com/_/redis)
 ```
 > docker pull redis
 ```
@@ -52,7 +52,7 @@ Nevertheless, this tutorial is based on Redigo.
 The connection is established through the Dial() function 
 
 ```go
-// Establish a connection to the Redis server listening on port 6379 of the docker instance 'redis-tutorial'.
+// Establish a connection to the Redis server listening on port 6379.
 conn, err := redis.Dial("tcp", "localhost:6379")
 if err != nil {
 	log.Fatal(err)
