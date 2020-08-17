@@ -133,6 +133,15 @@ Run the second tutorial to see the result
 go run main.go 2
 ```
 
+## Set/Get and Increment/Decrement an integer value
+
+
+Run the third tutorial to see the result
+```
+go run main.go 3
+
+
+
 ----
 
 Note for setting a password to access the Redis Server

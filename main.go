@@ -6,11 +6,10 @@ import (
 	"os"
 )
 
-
 func main() {
 
 	if len(os.Args) != 2 {
-		fmt.Println("Error: the parameter indicating the tutorial id is needed (between 1 and 2)")
+		fmt.Println("Error: the parameter indicating the tutorial id is needed (between 1 and 3)")
 		return
 	}
 
@@ -23,7 +22,10 @@ func main() {
 	case "2":
 		tutorial.PlayTutorial02()
 
+	case "3":
+		tutorial.PlayTutorial03()
+
 	default:
-		fmt.Println("Error: tutorial ID must be between 1 and 2")
+		fmt.Println("Error: tutorial ID must be between 1 and 3")
 	}
 }
